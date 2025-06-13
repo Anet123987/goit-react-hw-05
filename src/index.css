@@ -26,6 +26,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  padding: 15px;
 
 }
 
@@ -47,7 +48,7 @@ button {
   margin-left: 30px;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #202ae2;
 }
 button:focus,
 button:focus-visible {

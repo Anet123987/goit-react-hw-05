@@ -18,11 +18,23 @@ const MovieDetailsPage = () => {
 
   if (!movie) return <p>Завантаження фільму...</p>;
 
+  const posterUrl = movie.poster_path
+    ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
+    : 'https://via.placeholder.com/300x450?text=No+Poster';
+
   return (
     <main>
       <button onClick={() => navigate(backLink)}>← Назад</button>
-      <h1>{movie.title}</h1>
-      <p>{movie.overview}</p>
+
+      <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+        <img src={posterUrl} alt={movie.title} width="300" height="450" />
+        <div>
+          <h1>{movie.title}</h1>
+          <p><strong>Опис:</strong> {movie.overview}</p>
+          <p><strong>Дата релізу:</strong> {movie.release_date}</p>
+          <p><strong>Рейтинг:</strong> {movie.vote_average}</p>
+        </div>
+      </div>
 
       <hr />
       <h3>Додаткова інформація</h3>
@@ -31,7 +43,6 @@ const MovieDetailsPage = () => {
         <li><Link to="reviews" state={{ from: backLink }}>Відгуки</Link></li>
       </ul>
       <hr />
-
 
       <Outlet />
     </main>
