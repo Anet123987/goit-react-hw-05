@@ -7,6 +7,8 @@ const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const MoviesPage = lazy(() => import('./pages/MoviesPage/MoviesPage'));
 const MovieDetailsPage = lazy(() => import('./pages/MovieDetailsPage/MovieDetailsPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
+const Cast = lazy(() => import('./components/MovieCast/MovieCast'));
+const Reviews = lazy(() => import('./components/MovieReviews/MovieReviews'));
 
 function App() {
   return (
@@ -30,6 +32,3 @@ function App() {
 }
 
 export default App;
-
-import Cast from './components/MovieCast/MovieCast';
-import Reviews from './components/MovieReviews/MovieReviews';

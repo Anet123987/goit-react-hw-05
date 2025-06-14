@@ -39,8 +39,8 @@ const MovieDetailsPage = () => {
       <hr />
       <h3>Додаткова інформація</h3>
       <ul>
-        <li><Link to="cast" state={{ from: backLink }}>Акторський склад</Link></li>
-        <li><Link to="reviews" state={{ from: backLink }}>Відгуки</Link></li>
+        <li><Link to="cast" state={{ from: backLink }}> Cast</Link></li>
+        <li><Link to="reviews" state={{ from: backLink }}>Reviews</Link></li>
       </ul>
       <hr />
 
